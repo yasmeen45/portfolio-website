@@ -133,7 +133,7 @@ header h2 {
 /* Education
 ------------------------------------*/
 .education {
-    background: url(../images/education-background.jpg) no-repeat center/cover;
+    background: url(education-background.jpg) no-repeat center/cover;
 }
 .education section {
     width: 72%;
