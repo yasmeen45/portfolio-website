@@ -1,0 +1,251 @@
+/* 
+COLOUR PALETTE
+https://coolors.co/palette/0d1b2a-1b263b-415a77-778da9-e0e1dd
+#E0E1DD - beige, almost white
+#778DA9 - lightest blue
+#415A77 - blue
+#1B263B - dark blue, kinda looks black
+#0D1B2A - darkest blue, almost black
+
+#e76f51 - dark orange (links)
+*/
+
+/* Global Styles
+------------------------------------*/
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  } 
+
+body {
+    color: #0D1B2A;
+    background: #E0E1DD;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+img {
+    width: 280px;
+    height: 250px;
+}
+a {
+    color: #e76f51;
+}
+a:hover {
+    text-decoration: none;
+}
+h1 {
+    font-size: 70px;
+    line-height: 1.25;
+}
+h2 {
+    font-size: 35px;
+}
+h1, h2, .menu {
+    margin: 0;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 400;
+}
+.content-wrap {
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 70px 0;
+}
+li {
+    padding: 2px 0;
+}
+h3 + p {
+    font-style: italic;
+}
+.item-details h3, h3 ~ p {
+    margin: 5px 0;
+}
+.divider > section:last-of-type {
+    border: none;
+}
+
+/* Menu Bar
+------------------------------------*/
+.menu {
+    background: #E0E1DD;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 0;
+    font-size: 20px;
+    position: sticky;
+    top: 0px;
+}
+.menu ul {
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+.menu ul a {
+    color: #0D1B2A;
+    text-decoration: none;
+    flex: 1 1 200px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    padding: 0 40px;
+    padding-bottom: 15px;
+}
+.menu ul a:hover {
+    color: #1B263B;
+}
+.menu li:before {
+    content: '';
+    display: block;
+    height: 3px;
+    margin: 0 auto 10px;
+    background-color: #1B263B;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+.menu li:hover::before {
+    width: 80%;
+}
+
+
+/* Profile
+------------------------------------*/
+header {
+    background: #1B263B;
+    color: #E0E1DD;
+}
+header h2 {
+    animation: fadeIn 5s;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+/* Education
+------------------------------------*/
+.education {
+    background: url(../images/education-background.jpg) no-repeat center/cover;
+}
+.education section {
+    width: 72%;
+}
+
+/* Projects
+------------------------------------*/
+.projects {
+    background:#415A77;
+}
+
+.projects a {
+    background: #1B263B;
+    color: #E0E1DD;
+    text-decoration: none;
+    padding: 6px;
+    border-radius: 4px;
+    display: inline-block;
+    box-shadow: 0 2px #999;
+}
+.projects a:hover {
+    background: rgba(27,38,59,80%);
+}
+.projects a:active {
+    box-shadow: 0 1px #666;
+    transform: translateY(1px);
+  }
+.projects p {
+    margin-bottom: 10px;
+}
+.project-item {
+    overflow: hidden;
+    border-bottom: 1.5px dashed #E0E1DD;
+    padding: 20px 0;
+}
+.project-item h3 {
+    margin-top: 0;
+}
+
+/* Work Experience
+------------------------------------*/
+
+
+/* Contact Info
+------------------------------------*/
+footer {
+    background: #1B263B;
+    color: #E0E1DD;
+}
+footer .content-wrap {
+    padding: 50px 0;
+}
+.contact-list {
+    padding-top: 10px;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.contact-list li {
+    list-style-type: none;
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+}
+.contact-list a {
+    padding: 10px;
+    padding-left: 0;
+}
+
+
+/* Responsive
+------------------------------------*/
+
+@media screen and (min-width: 750px) {
+    header, footer {
+        text-align: center;
+    }
+    .education {
+        background-position: top right;
+    }
+    .job-item {
+        display: grid;
+        grid-template-columns: 0.85fr 2fr;
+        column-gap: 10px;
+        border-bottom: 1.5px dashed #415A77;
+        padding: 20px 0;
+    }
+    .contact-list {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    .contact-list li {
+        padding-left: 0;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .project-item img {
+        float: left;
+        margin-right: 20px;
+    }
+}
+
+
+
+
+
